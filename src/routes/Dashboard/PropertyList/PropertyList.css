@@ -1,0 +1,32 @@
+.property-list-container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: rgb(20, 47, 32);
+  height: 89vh;
+  /* display: flex; */
+}
+
+.property-list-container h1 {
+  color: rgb(205, 201, 193);
+  font-size: 40px;
+  display: inline-block;
+  margin-right: 500px;
+}
+
+.step1-link {
+  background-color: rgb(18, 103, 25);
+  border: none;
+  color: white;
+  height: 50px;
+  width: 200px;
+  font-size: 20px;
+}
+
+.step1-link:hover {
+  cursor: pointer;
+}
+
+.property-list-container h2 {
+  color: white;
+}

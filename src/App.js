@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux' // redux specific
 import './App.css';
-import Header from './Components/Header/Header'
-import House from './Components/House/House'
-import { HashRouter, Link } from 'react-router-dom'
+import Header from './components/Header/Header'
+import { HashRouter } from 'react-router-dom'
+import { initializePropertiesStore } from './redux/reducers/property.reducer' // redux specific
 import routes from './routes'
 
-export default class App extends Component {
-  constructor() {
-    super() 
-    this.state = {
+class App extends Component {
 
-    }
+  componentDidMount() {
+    this.props.initializeProperties()
   }
-
 
   render() {
     return (
@@ -25,3 +23,9 @@ export default class App extends Component {
     )
   }
 }
+
+const mapDispatchToProps = (dispatch) => ({
+  initializeProperties: () => dispatch(initializePropertiesStore())
+});
+
+export default connect(null, mapDispatchToProps)(App)
